@@ -98,4 +98,4 @@ MonoBehaviour:
   moveSpeed: 7.5
   padding: 0.45
   laserPrefab: {fileID: 7404183434924728096, guid: 66b6508891446f14cbf8fe4beff31e9d, type: 3}
-  laserSpeed: 3.5
+  laserSpeed: 10

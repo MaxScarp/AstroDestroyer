@@ -5,8 +5,7 @@ using UnityEngine;
 public class Player : MonoBehaviour
 {
     [SerializeField] float moveSpeed = 10f;
-    [SerializeField] float paddingX = 0.5f;
-    [SerializeField] float paddingY = 0.5f;
+    [SerializeField] float padding = 0.45f;
 
     float xMin, xMax, yMin, yMax;
 
@@ -23,6 +22,21 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
+        Movement();
+        Aim();
+    }
+
+    private void Aim()
+    {
+        Camera gameCamer = Camera.main;
+        Vector3 mousePosition = gameCamer.ScreenToWorldPoint(Input.mousePosition);
+        Vector3 aimDirection = (mousePosition - transform.position).normalized;
+        float angle = Mathf.Atan2(aimDirection.x, aimDirection.y) * Mathf.Rad2Deg;
+        transform.eulerAngles = new Vector3(0, 0, -angle);
+    }
+
+    private void Movement()
+    {
         Vector2 movement = new Vector2(Input.GetAxisRaw("Horizontal"), Input.GetAxisRaw("Vertical"));
         movement.Normalize();
         movement *= Time.deltaTime * moveSpeed;
@@ -36,9 +50,9 @@ public class Player : MonoBehaviour
     private void SetupMoveBoundaries()
     {
         Camera gameCamera = Camera.main;
-        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + paddingX;
-        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - paddingX;
-        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + paddingY;
-        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - paddingY;
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + padding;
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - padding;
+        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + padding;
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - padding;
     }
 }

@@ -96,5 +96,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 7.5
-  paddingX: 0.45
-  paddingY: 0.3
+  padding: 0.45
+  laserPrefab: {fileID: 7404183434924728096, guid: 66b6508891446f14cbf8fe4beff31e9d, type: 3}
+  laserSpeed: 3.5

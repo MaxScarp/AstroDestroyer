@@ -30,7 +30,8 @@ public class MeteorSpawner : MonoBehaviour
     {
         for(int i = 0; i < currentWave.GetNumberOfMeteor(); i++)
         {
-            var meteorClone = Instantiate(currentWave.GetMeteorPrefab(), currentWave.GetWaypoints()[0].transform.position, currentWave.GetMeteorPrefab().transform.rotation);
+            int random = Random.Range(0, currentWave.GetMeteorPrefabs().Count);
+            var meteorClone = Instantiate(currentWave.GetMeteorPrefabs()[random], currentWave.GetWaypoints()[0].transform.position, currentWave.GetMeteorPrefabs()[random].transform.rotation);
             meteorClone.GetComponent<MeteorPathing>().SetWaveConfig(currentWave);
             yield return new WaitForSeconds(currentWave.GetTimeOfSpawn());
         }

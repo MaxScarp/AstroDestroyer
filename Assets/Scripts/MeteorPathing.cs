@@ -4,19 +4,21 @@ using UnityEngine;
 
 public class MeteorPathing : MonoBehaviour
 {
-    [SerializeField] GameObject pathPrefab;
-
+    WaveConfig waveConfig;
     List<Transform> waypoints;
     int waypointsIndex = 0;
     float moveSpeed = 5f;
 
     private void Start()
     {
-        waypoints = new List<Transform>();
-        foreach (Transform waypoint in pathPrefab.transform)
-        {
-            waypoints.Add(waypoint);
-        }
+        waypoints = waveConfig.GetWaypoints();
+        transform.position = waypoints[0].transform.position;
+        moveSpeed = waveConfig.GetMoveSpeed();
+    }
+
+    public void SetWaveConfig(WaveConfig waveConfig)
+    {
+        this.waveConfig = waveConfig;
     }
 
     private void Update()
@@ -31,6 +33,7 @@ public class MeteorPathing : MonoBehaviour
             Vector2 targetPosition = waypoints[waypointsIndex].transform.position;
             float movementPerFrame = moveSpeed * Time.deltaTime;
             transform.position = Vector2.MoveTowards(transform.position, targetPosition, movementPerFrame);
+
             if((Vector2)transform.position == targetPosition)
             {
                 waypointsIndex++;

@@ -1,0 +1,20 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fb3bb25a8fbdfc4eb6c848bee89ef77, type: 3}
+  m_Name: Wave B
+  m_EditorClassIdentifier: 
+  meteorPrefab: {fileID: 6742448664150807788, guid: a26c5fd5b535b0f4d822526d7092ef00, type: 3}
+  pathPrefab: {fileID: 5863613954088181928, guid: 16f1cb35aa52f4f44b86874acedae5b1, type: 3}
+  numberOfMeteor: 11
+  timeOfSpawn: 0.3
+  spawnRandomFactor: 1
+  moveSpeed: 5

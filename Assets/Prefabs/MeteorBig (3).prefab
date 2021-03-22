@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 401546821653213339}
   - component: {fileID: 2310206963194265733}
+  - component: {fileID: 8483584628642198941}
+  - component: {fileID: -7287989343060152119}
   m_Layer: 0
   m_Name: MeteorBig (3)
   m_TagString: Untagged
@@ -82,3 +84,60 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &8483584628642198941
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157399942482153779}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e5422bdec9ae1f14e859be85a5b84636, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!60 &-7287989343060152119
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5157399942482153779}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.98, y: 0.96}
+    newSize: {x: 0.98, y: 0.96}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0.42999998, y: -0.13}
+      - {x: 0.48999998, y: 0.04}
+      - {x: 0.48999998, y: 0.14999999}
+      - {x: 0.42, y: 0.22999999}
+      - {x: 0.34, y: 0.32}
+      - {x: 0.19999999, y: 0.48}
+      - {x: 0.07, y: 0.48}
+      - {x: -0.02, y: 0.45}
+      - {x: -0.35999998, y: 0.35999998}
+      - {x: -0.38, y: 0.32999998}
+      - {x: -0.48, y: 0.01}
+      - {x: -0.48999998, y: -0.02}
+      - {x: -0.48999998, y: -0.14999999}
+      - {x: -0.38, y: -0.29}
+      - {x: -0.29, y: -0.39}
+      - {x: -0.21, y: -0.48}
+      - {x: -0.01, y: -0.48}
+      - {x: 0.08, y: -0.47}
+      - {x: 0.32, y: -0.45}
+      - {x: 0.35, y: -0.39999998}

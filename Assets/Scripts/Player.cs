@@ -51,8 +51,13 @@ public class Player : MonoBehaviour
         {
             Vector3 shootDirection = mouseToWorldPosition();
             shootDirection = shootDirection - transform.position;
+
             var laser = Instantiate(laserPrefab, transform.position, transform.rotation);
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(shootDirection.x, shootDirection.y).normalized * laserSpeed;
+
+            Vector2 laserVelocity = new Vector2(shootDirection.x, shootDirection.y);
+            laserVelocity.Normalize();
+
+            laser.GetComponent<Rigidbody2D>().velocity = laserVelocity * laserSpeed;
             yield return new WaitForSeconds(shootingRate);
         }
     }

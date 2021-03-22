@@ -21,13 +21,14 @@ public class Player : MonoBehaviour
     private void Start()
     {
         gameCamera = Camera.main;
+        transform.position = new Vector3(0, 0, 0);
         SetupMoveBoundaries();
     }
 
     private void Update()
     {
         Move();
-        //Aim();
+        Aim();
         Shoot();
     }
 
@@ -48,8 +49,10 @@ public class Player : MonoBehaviour
     {
         while (true)
         {
-            var laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
-            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, laserSpeed);
+            Vector3 shootDirection = mouseToWorldPosition();
+            shootDirection = shootDirection - transform.position;
+            var laser = Instantiate(laserPrefab, transform.position, transform.rotation);
+            laser.GetComponent<Rigidbody2D>().velocity = new Vector2(shootDirection.x, shootDirection.y).normalized * laserSpeed;
             yield return new WaitForSeconds(shootingRate);
         }
     }

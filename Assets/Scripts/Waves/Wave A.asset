@@ -18,12 +18,8 @@ MonoBehaviour:
   - {fileID: 5263396800701762203, guid: 7f6f4618d10500e43a688b0f7fbb3cf6, type: 3}
   - {fileID: 5157399942482153779, guid: f42d4a3f0059c014e84d21d02a532470, type: 3}
   - {fileID: 6742448664150807788, guid: a26c5fd5b535b0f4d822526d7092ef00, type: 3}
-  - {fileID: 4162371340825755815, guid: c6f3e3d732efd474d9c4590af5d625cb, type: 3}
-  - {fileID: 6232054302673838115, guid: 7b0477b06f6d20a428ffde9b6e5f2f9a, type: 3}
-  - {fileID: 3517118113077179140, guid: 9522546a8d54ba84096f57891c4c7305, type: 3}
-  - {fileID: 2183132370897220905, guid: b8cfd7f13d359aa4ebb692691164159b, type: 3}
   pathPrefab: {fileID: 2237028780668431905, guid: 42396baf9c152cf41a45a8d0e5952205, type: 3}
   numberOfMeteor: 3
-  timeOfSpawn: 2.5
-  spawnRandomFactor: 0.3
+  timeOfSpawn: 1
+  spawnRandomFactor: 0.7
   moveSpeed: 3

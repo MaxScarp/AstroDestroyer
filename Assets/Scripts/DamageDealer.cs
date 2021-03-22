@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class DamageDealer : MonoBehaviour
 {
-    [SerializeField] int damage = 50;
+    [SerializeField] int damage = 30;
 
     public int GetDamage() => damage;
 

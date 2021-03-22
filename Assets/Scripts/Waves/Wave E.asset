@@ -10,16 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 3fb3bb25a8fbdfc4eb6c848bee89ef77, type: 3}
-  m_Name: Wave B
+  m_Name: Wave E
   m_EditorClassIdentifier: 
   meteorPrefabs:
+  - {fileID: 4315535158351123744, guid: a51450284b372af4caf051d5c3c3f4fc, type: 3}
   - {fileID: 5884734056665141788, guid: 0b25c996dd6ea0b448d4bc207941db21, type: 3}
-  - {fileID: 5157399942482153779, guid: f42d4a3f0059c014e84d21d02a532470, type: 3}
-  - {fileID: 4162371340825755815, guid: c6f3e3d732efd474d9c4590af5d625cb, type: 3}
   - {fileID: 3517118113077179140, guid: 9522546a8d54ba84096f57891c4c7305, type: 3}
-  - {fileID: 5263396800701762203, guid: 7f6f4618d10500e43a688b0f7fbb3cf6, type: 3}
-  pathPrefab: {fileID: 5863613954088181928, guid: 16f1cb35aa52f4f44b86874acedae5b1, type: 3}
+  - {fileID: 2183132370897220905, guid: b8cfd7f13d359aa4ebb692691164159b, type: 3}
+  pathPrefab: {fileID: 6284179223154032233, guid: e5ef534dea5104e40bcf431402313547, type: 3}
   numberOfMeteor: 5
   timeOfSpawn: 1.5
-  spawnRandomFactor: 2
-  moveSpeed: 4.5
+  spawnRandomFactor: 4
+  moveSpeed: 2.5

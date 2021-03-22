@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 2083795445794945753}
   - component: {fileID: -7104625521940668422}
   - component: {fileID: 7050397217711785441}
+  - component: {fileID: 8009883791443596176}
   m_Layer: 0
   m_Name: MeteorBig (1)
   m_TagString: Untagged
@@ -142,3 +143,16 @@ PolygonCollider2D:
       - {x: -0.12, y: -0.39}
       - {x: 0.01, y: -0.32999998}
       - {x: 0.34, y: -0.24}
+--- !u!114 &8009883791443596176
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5884734056665141788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5044a88ebd6b1f8439795fff5ad7e818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200

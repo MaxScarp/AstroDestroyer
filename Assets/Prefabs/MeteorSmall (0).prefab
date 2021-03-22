@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8973277033455492320}
   - component: {fileID: 5490971563201953235}
   - component: {fileID: -292272983155641094}
+  - component: {fileID: -4599188772528569433}
   m_Layer: 0
   m_Name: MeteorSmall (0)
   m_TagString: Untagged
@@ -128,3 +129,16 @@ PolygonCollider2D:
       - {x: 0.06, y: -0.14}
       - {x: 0.14, y: -0.11}
       - {x: 0.14, y: 0.14}
+--- !u!114 &-4599188772528569433
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6232054302673838115}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5044a88ebd6b1f8439795fff5ad7e818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200

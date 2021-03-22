@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 1919964582300991825}
   - component: {fileID: 2557167627094147281}
   - component: {fileID: -6249162421626747101}
+  - component: {fileID: -6263074114987569717}
   m_Layer: 0
   m_Name: MeteordMed (0)
   m_TagString: Untagged
@@ -130,3 +131,16 @@ PolygonCollider2D:
       - {x: 0.21499999, y: -0.125}
       - {x: 0.21499999, y: 0.13499999}
       - {x: 0.205, y: 0.21499999}
+--- !u!114 &-6263074114987569717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6742448664150807788}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5044a88ebd6b1f8439795fff5ad7e818, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 200

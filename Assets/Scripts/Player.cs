@@ -8,10 +8,13 @@ public class Player : MonoBehaviour
     [SerializeField] float padding = 0.45f;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float laserSpeed = 10f;
+    [SerializeField] float shootingRate = 0.7f;
 
     
     float xMin, xMax, yMin, yMax;
     Camera gameCamera;
+
+    Coroutine handleShootCoroutine;
 
     private Vector3 mouseToWorldPosition() => gameCamera.ScreenToWorldPoint(Input.mousePosition);
 
@@ -32,8 +35,22 @@ public class Player : MonoBehaviour
     {
         if(Input.GetButtonDown("Fire1"))
         {
+            handleShootCoroutine = StartCoroutine(HandleShoot());
+        }
+        if(Input.GetButtonUp("Fire1"))
+        {
+            StopCoroutine(handleShootCoroutine);
+        }
+
+    }
+
+    IEnumerator HandleShoot()
+    {
+        while (true)
+        {
             var laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0f, laserSpeed);
+            yield return new WaitForSeconds(shootingRate);
         }
     }
 
